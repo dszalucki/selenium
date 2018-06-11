@@ -2,6 +2,9 @@ import tkinter
 
 
 class Okno:
+    login = ' '
+    haslo = ' '
+
 
     def uwierzytelnianie(self):
 
@@ -17,19 +20,15 @@ class Okno:
 
         login_entry = tkinter.Entry(master=okno)
         login_entry.grid(row=0, column=1)
+        login = login_entry.get()
 
 
         haslo_entry = tkinter.Entry(master=okno)
         haslo_entry.grid(row=1, column=1)
+        haslo = haslo_entry.get()
 
-
-        send_button = tkinter.Button(master=okno, text='Wyślij', command=okno.quit())
+        send_button = tkinter.Button(master=okno, text='Wyślij', command=okno.quit)
         send_button.grid(row=4, column=1, columnspan=2)
 
         okno.title('UWIERZYTELNIANIE')
         okno.mainloop()
-
-
-
-
-Okno().uwierzytelnianie()
